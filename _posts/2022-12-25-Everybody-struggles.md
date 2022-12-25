@@ -5,7 +5,7 @@ categories: outreachy
 ---
 
 # A brief overview of my tasks
-It has been three weeks since I started my internship at Zarr and the two tasks I have been working on are going through Zarr’s codebase, documentation, specification and [creating a ZipStore in zarr-python and testing the support across various Zarr implementations](https://github.com/caviere/testing_zipstore). With the help of my mentors Josh and Sanket, we identified implementations that I can test out. One of the implementations is Jzarr. Jzarr is a Java library providing an implementation of chunked, compressed, N-dimensional arrays that is close to the python Zarr package. 
+It has been three weeks since I started my internship at Zarr and the two tasks I have been working on are going through Zarr’s codebase, documentation, specification and [creating a ZipStore in zarr-python and testing the support across various Zarr implementations](https://github.com/caviere/testing_zipstore). With the help of my mentors [Josh](https://github.com/joshmoore) and [Sanket](https://github.com/MSanKeys963), we identified implementations that I can test out. One of the implementations is Jzarr. Jzarr is a Java library providing an implementation of chunked, compressed, N-dimensional arrays that is close to the python Zarr package. 
 
 Being a Java-novice, it's been a real eye-opener or should I say, “java-opener?” I was successful in installing the necessary tools required. Added the Jzarr maven dependency so that I can make use of the library but integration has yet to be successful. My mentors and I are looking into the issue and it is safe to say I'm not ready for the big leagues just yet but I'm definitely getting a taste of the java life.
  
