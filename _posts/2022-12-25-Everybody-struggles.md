@@ -15,7 +15,7 @@ Alongside Jzarr, I have tested out other four implementations namely:
 * [Gdal using the zarr driver](https://gdal.org/drivers/raster/zarr.html#raster-zarr)
 * [Netcdf nczarr implementation](https://docs.unidata.ucar.edu/nug/current/nczarr_head.html#nczarr_zip) 
 
-These implementations efficiently support zarr zip stores as well as offer a seamless interoperbility. I have also tested out different shapes and chunks. It is safe to say the optimal chunks should be 10,000 laid out in a 100 by 100 grid.
+These implementations efficiently support zarr zip stores as well as offer a seamless interoperbility. I have also tested out different shapes and chunks. It is safe to say the optimal chunks should be 10000 laid out in a 100 by 100 grid.
 
 # Tips
 I’d say what has made the internship easier is breaking a task into doable bits, having a routine, being disciplined and most importantly, keeping tabs with my mentors. Their guidance on how to handle tasks has really made it easier for me to tackle them which I’m grateful for. 
