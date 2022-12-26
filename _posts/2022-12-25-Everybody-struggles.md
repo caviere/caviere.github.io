@@ -11,7 +11,7 @@ One of the implementations is Jzarr. [Jzarr](https://jzarr.readthedocs.io/en/lat
 
 Alongside Jzarr, I have tested out other four implementations namely: 
 * [H5py](https://www.h5py.org/) 
-* [Fsspec](https://filesystem-spec.readthedocs.io/en/latest/),
+* [Fsspec](https://filesystem-spec.readthedocs.io/en/latest/)
 * [Gdal using the zarr driver](https://gdal.org/drivers/raster/zarr.html#raster-zarr)
 * [Netcdf nczarr implementation](https://docs.unidata.ucar.edu/nug/current/nczarr_head.html#nczarr_zip) 
 
