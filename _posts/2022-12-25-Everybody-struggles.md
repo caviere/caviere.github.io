@@ -10,10 +10,10 @@ It has been three weeks since I started my internship at Zarr and the two tasks 
 One of the implementations is Jzarr. [Jzarr](https://jzarr.readthedocs.io/en/latest/) is a Java library providing an implementation of chunked, compressed, N-dimensional arrays that is close to the python [Zarr package](https://zarr.readthedocs.io/en/stable/index.html). Being a Java-novice, it's been a real eye-opener. I was successful in installing the necessary tools required. Added the Jzarr maven dependency so that I can make use of the library but integration has yet to be successful. My mentors and I are looking into the issue and it is safe to say I'm not ready for the big leagues just yet but I'm definitely getting a taste of the java life.
 
 Alongside Jzarr, I have tested out other four implementations namely: 
-* [h5py](https://www.h5py.org/) 
-* [fsspec](https://filesystem-spec.readthedocs.io/en/latest/),
-* [gdal using the Zarr driver](https://gdal.org/drivers/raster/zarr.html#raster-zarr)
-* [netcdf nczarr implementation](https://docs.unidata.ucar.edu/nug/current/nczarr_head.html#nczarr_zip) 
+* [H5py](https://www.h5py.org/) 
+* [Fsspec](https://filesystem-spec.readthedocs.io/en/latest/),
+* [Gdal using the zarr driver](https://gdal.org/drivers/raster/zarr.html#raster-zarr)
+* [Netcdf nczarr implementation](https://docs.unidata.ucar.edu/nug/current/nczarr_head.html#nczarr_zip) 
 
 These implementations efficiently support zarr zip stores as well as offer a seamless interoperbility. I have also tested out different shapes and chunks. It is safe to say the optimal chunks should be 10,000 laid out in a 100 by 100 grid.
 
