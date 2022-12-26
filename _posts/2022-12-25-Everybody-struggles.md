@@ -14,6 +14,7 @@ Alongside Jzarr, I have tested out other four implementations namely:
 * [fsspec](https://filesystem-spec.readthedocs.io/en/latest/),
 * [gdal using the Zarr driver](https://gdal.org/drivers/raster/zarr.html#raster-zarr)
 * [netcdf nczarr implementation](https://docs.unidata.ucar.edu/nug/current/nczarr_head.html#nczarr_zip) 
+
 These implementations efficiently support zarr zip stores as well as offer a seamless interoperbility. I have also tested out different shapes and chunks. It is safe to say the optimal chunks should be 10,000 laid out in a 100 by 100 grid.
 
 # Tips
