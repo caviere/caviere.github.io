@@ -14,5 +14,5 @@ Overall, I hope that this blog post has given you a better understanding of the 
 
 # Useful links
 * [zarr implementations](https://github.com/zarr-developers/zarr_implementations)
-* [zarr-python package](https://zarr.readthedocs.io/en/stable/index.html)
+* [zarr-python documentation](https://zarr.readthedocs.io/en/stable/index.html)
 * [zarr-python codebase](https://github.com/zarr-developers/zarr-python/tree/main/zarr)
