@@ -1,5 +1,5 @@
 ---
-title: "Script Testing ZipStore"
+title: "Benchmarking and Testing ZipStore"
 Layout: post
 categories: outreachy
 ---
