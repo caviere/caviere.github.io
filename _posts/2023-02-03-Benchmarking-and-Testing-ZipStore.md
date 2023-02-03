@@ -29,13 +29,13 @@ Next, I tested the Zipstore with the xarray library. The code is able to open th
 
 The netcdf4 library does not have direct support for reading and writing data in a Zipstore. As seen in the output, the netcdf4 library is unable to open the Zipstore file with the provided code.
 
-The gdal library fails to open the dataset.
+The gdal library is able to open and read the dataset.
 
 The h5py library is unable to open the Zipstore file as it is not a valid HDF5 file. This means that h5py cannot be used to read or write data in a Zipstore.
 
 Finally, I tested the Zipstore with the fsspec library. The code is unable to open the Zipstore file as the ZipStore object does not have the required attribute.
 
-In conclusion, the results show that the zarr and xarray libraries have full support for reading and writing data in a Zipstore. The gdal, the netcdf4 and h5py libraries do not have full support for Zipstores. The fsspec library requires further investigation to determine its support for Zipstores.
+In conclusion, the results show that the zarr and xarray libraries have full support for reading and writing data in a Zipstore. The gdal library is able to open and read data in a Zipstore. The netcdf4 and h5py libraries do not have full support for Zipstores. The fsspec library requires further investigation to determine its support for Zipstores.
 
 # [Mnist Dataset](https://github.com/caviere/testing_zipstore/blob/main/py/example.py)
 
