@@ -4,7 +4,7 @@ Layout: post
 categories: outreachy
 ---
 
-# [Script](https://github.com/caviere/script/blob/master/sample.py)
+# [Benchmarking](https://github.com/caviere/script/blob/master/sample.py)
 
 Introducing Zarr, a library for efficient array storage and computation, and its Python implementation. In this blog, we will explore how to create Zarr arrays, check their integrity and measure the read and write times for different stores.
 The benchmark class initializes a set of arrays with random integers. The run method takes the store to be benchmarked as an input, and performs the write and read operations. The write operation stores the original array in the specified store and the read operation retrieves the array from the store, computes its checksum, and compares it to the original array's checksum.
