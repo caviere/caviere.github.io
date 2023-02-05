@@ -46,17 +46,19 @@ The script then uses TensorFlow's [keras.datasets](https://keras.io/api/datasets
 
 # [Benchmarking](https://github.com/caviere/script/blob/master/sample.py)
 
-Introducing Zarr, a format for storing large data in chunked, compress N-dimensional arrays and its [python implementation](https://github.com/zarr-developers/zarr-python). In this blog, I will explore how to create Zarr arrays, check their integrity and measure the read and write times for different stores.
-The benchmark class initializes a set of arrays with random integers. The run method takes the store to be benchmarked as an input and performs the write and read operations. The write operation stores the original array in the specified store and the read operation retrieves the array from the store, computes its checksum using SHA256 and compares it to the original array's checksum.
+Introducing Zarr, a format for storing large data in chunked, compress N-dimensional arrays and its [python implementation](https://github.com/zarr-developers/zarr-python). In this blog, I will explain how I created zarr arrays, checked their integrity and measured the read and write times for different stores.
+
+In the [script](https://github.com/caviere/script/blob/master/sample.py), the benchmark class initializes a set of arrays with random integers. The run method takes the store to be benchmarked as an input and performs the write and read operations. The write operation stores the original array in the specified store and the read operation retrieves the array from the store, computes its checksum using SHA256 and compares it to the original array's checksum.
+
 The stores being benchmarked are the following:
 
 * [ZipStore](https://zarr.readthedocs.io/en/stable/api/storage.html#zarr.storage.ZipStore), where the data is compressed and stored in a zip file.
 * [Fsspec store](https://github.com/fsspec/filesystem_spec), where the data is stored in an in-memory file system.
 * [Directory store](https://zarr.readthedocs.io/en/stable/api/storage.html#zarr.storage.DirectoryStore), where the data is stored as individual files in a directory.
 
-The results of the benchmark are displayed as bar charts using [Plotly](https://plotly.com/). The bar chart shows the time taken to write to and read from the stores. The results demonstrate that the write time for the fsspec is faster than that of the zipstore and the directory store. The read time for the fsspec and the zipstore is similarly fast but the directory store takes longer to read from.
+The results of the benchmark are displayed as bar charts using [plotly](https://plotly.com/). The bar charts show the time taken to write to and read from the stores. The results demonstrate that the write time for the fsspec is faster than that of the zipstore and the directory store. The read time for the fsspec and the zipstore is similarly fast but the directory store takes longer to read from.
 
-In conclusion, the benchmark shows that Zarr arrays can be stored and retrieved efficiently from different stores. The choice of store depends on the use case and the trade-off between write speed and read speed. For example, the fsspec is fast for read and write operations but the data is lost when the program terminates. The zipstore and the directory store are slower for write operations but the data is persistent and can be accessed across sessions. Fsspec array storage limits us to the size of the memory (RAM) available to us, while directory storage doesn't have this limitation.
+In conclusion, the benchmark shows that zarr arrays can be stored and retrieved efficiently from different stores. The choice of store depends on the use case and the trade-off between write speed and read speed. For example, the fsspec is fast for read and write operations but the data is lost when the program terminates. The zipstore and the directory store are slower for write operations but the data is persistent and can be accessed across sessions. Fsspec array storage limits us to the size of the memory (RAM) available to us while directory storage doesn't have this limitation.
 
 ![Screenshot from 2023-02-05 17-58-09](https://user-images.githubusercontent.com/110189834/216827078-710f7f33-19ec-4990-b6ce-4fca83c83486.png)
 ![Screenshot from 2023-02-05 17-58-18](https://user-images.githubusercontent.com/110189834/216827060-1d6c824b-96d4-4bb1-aace-87a87144d9bc.png)
