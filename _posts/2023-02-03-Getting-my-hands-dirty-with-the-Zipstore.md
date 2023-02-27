@@ -44,11 +44,11 @@ store.close()
 
 The script then uses TensorFlow's [keras.datasets](https://keras.io/api/datasets/) module to load the MNIST data into numpy arrays and asserts the shape of the arrays to verify that the data was loaded correctly. Finally, the script creates a ZipStore using the Zarr library and saves the training images to the store by creating a Zarr array and assigning the images to it. The compressed dataset is saved to the disk and then the store is closed. 
 
-# [Benchmarking](https://github.com/caviere/script/blob/master/sample.py)
+# [Benchmarking](https://github.com/caviere/testing_zipstore/blob/main/benchmark/main.py)
 
 Introducing Zarr, a format for storing large data in chunked, compress N-dimensional arrays and its [python implementation](https://github.com/zarr-developers/zarr-python). In this blog, I will explain how I created zarr arrays, checked their integrity and measured the read and write times for different stores.
 
-In the [script](https://github.com/caviere/script/blob/master/sample.py), the benchmark class initializes a set of arrays with random integers. The run method takes the store to be benchmarked as an input and performs the write and read operations. The write operation stores the original array in the specified store and the read operation retrieves the array from the store, computes its checksum using SHA256 and compares it to the original array's checksum.
+In the [script](https://github.com/caviere/testing_zipstore/blob/main/benchmark/main.py), the benchmark class initializes a set of arrays with random integers. The run method takes the store to be benchmarked as an input and performs the write and read operations. The write operation stores the original array in the specified store and the read operation retrieves the array from the store, computes its checksum using SHA256 and compares it to the original array's checksum.
 
 The stores being benchmarked are the following:
 
