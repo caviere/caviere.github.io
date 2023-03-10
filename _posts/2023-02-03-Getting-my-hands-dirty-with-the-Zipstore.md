@@ -20,7 +20,7 @@ The gdal library is able to open and read the dataset.
 
 The h5py library is unable to open the Zipstore file as it is not a valid HDF5 file. This means that h5py cannot be used to read or write data in a Zipstore.
 
-Finally, I tested the Zipstore with the fsspec library. The code is able to open and read the Zipstore file.
+Finally, I tested the Zipstore with the fsspec library. Fsspec is able to open the Zipstore file. Fsspec can be used to read and write data in a Zipstore.
 
 In conclusion, the results show that the zarr and xarray libraries have full support for reading and writing data in a Zipstore. The gdal and fsspec libraries are able to open and read data in a Zipstore. The netcdf4 and h5py libraries do not have full support for Zipstores. 
 
