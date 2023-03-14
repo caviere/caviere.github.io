@@ -46,9 +46,7 @@ The script then uses TensorFlow's [keras.datasets](https://keras.io/api/datasets
 
 # [Benchmarking](https://github.com/caviere/testing_zipstore/blob/main/benchmark/main.py)
 
-Introducing Zarr, a format for storing large data in chunked, compressed N-dimensional arrays and its [python implementation](https://github.com/zarr-developers/zarr-python). In this blog, I will explain how I created zarr arrays, checked their integrity and measured the read and write times for different stores.
-
-In the [script](https://github.com/caviere/testing_zipstore/blob/main/benchmark/main.py), the benchmark class initializes a set of arrays with random integers. The run method takes the store to be benchmarked as an input and performs the write and read operations. The write operation stores the original array in the specified store and the read operation retrieves the array from the store, computes its checksum using SHA256 and compares it to the original array's checksum.
+This [script](https://github.com/caviere/testing_zipstore/blob/main/benchmark/main.py) shows how I created zarr arrays, checked their integrity and measured the read and write times for different stores. The benchmark class initializes a set of arrays with random integers. The run method takes the store to be benchmarked as an input and performs the write and read operations. The write operation stores the original array in the specified store and the read operation retrieves the array from the store, computes its checksum using SHA256 and compares it to the original array's checksum.
 
 The stores being benchmarked are the following:
 
